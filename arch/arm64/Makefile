@@ -31,7 +31,11 @@ GEN_OPT_FLAGS := $(call cc-option,$(ARM_ARCH_OPT),-march=armv8-a) \
 
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only
+<<<<<<< HEAD
 KBUILD_CFLAGS	+= $(GEN_OPT_FLAGS)
+=======
+KBUILD_CFLAGS	+= -fno-pic
+>>>>>>> f39d403... arch: arm64: force -fno-pic
 ifeq ($(CONFIG_CPU_BIG_ENDIAN), y)
 KBUILD_CPPFLAGS	+= -mbig-endian
 AS		+= -EB
