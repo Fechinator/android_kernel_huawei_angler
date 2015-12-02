@@ -3,6 +3,8 @@
 # SDIO Basic feature
 #####################
 
+EXTRA_CFLAGS += -Wno-memset-transposed-args
+
 DHDCFLAGS += -Wall -Wstrict-prototypes -Dlinux -DLINUX -DBCMDRIVER            \
 	-DBCMDONGLEHOST -DUNRELEASEDCHIP -DBCMDMA32 -DBCMFILEIMAGE            \
 	-DDHDTHREAD -DSHOW_EVENTS -DBCMDBG -DWLP2P                            \
