@@ -100,7 +100,6 @@ config THERMAL_TSENS8974
 	  thermal userspace client when a threshold is reached. Warm/Cool
 	  temperature thresholds can be set independently for each sensor.
 
-<<<<<<< HEAD
 config LIMITS_MONITOR
 	bool "LMH monitor driver"
 	depends on THERMAL
@@ -118,28 +117,18 @@ config LIMITS_LITE_HW
 	 implements the APIs required for getting the details about sensors
 	 supported by LMH Lite, their throttling intensity and the operating
 	 profiles.
-=======
-choice
-	prompt "MSM Thermal Monitor Types"
-	default THERMAL_MONITOR
->>>>>>> f8297f0... intelli_thermal v3.0: initial coding for Linux 3.10 Qualcomm kernels
 
 config THERMAL_MONITOR
 	bool "Monitor thermal state and limit CPU Frequency"
 	depends on THERMAL_TSENS8960 || THERMAL_TSENS8974
-<<<<<<< HEAD
 	depends on CPU_FREQ || CPU_FREQ_MSM
 	default n
-=======
-	depends on CPU_FREQ_MSM
->>>>>>> f8297f0... intelli_thermal v3.0: initial coding for Linux 3.10 Qualcomm kernels
 	help
 	  This enables thermal monitoring capability in the kernel in the
 	  absence of a system wide thermal monitoring entity or until such an
 	  entity starts running in the userspace. Monitors TSENS temperature
 	  and limits the max frequency of the cores.
 
-<<<<<<< HEAD
 config SUPPLY_LM_MONITOR
 	bool "SUPPLY current monitor driver"
 	depends on THERMAL && PM_OPP && CPU_FREQ
@@ -148,17 +137,6 @@ config SUPPLY_LM_MONITOR
 	 including cpu, gpu and modem, number of cores online and SoC
 	 temperature. Based on these inputs, the driver throttles
 	 apps subsystem.
-=======
-config INTELLI_THERMAL
-	bool "Better thermal monitor for MSM"
-	depends on THERMAL_TSENS8974
-	depends on CPU_FREQ_MSM
-	help
-	  This enables thermal monitoring capability in the kernel replacing
-	  userspace thermal monitoring altogether.
-
-endchoice
->>>>>>> f8297f0... intelli_thermal v3.0: initial coding for Linux 3.10 Qualcomm kernels
 
 config SPEAR_THERMAL
 	bool "SPEAr thermal sensor driver"
