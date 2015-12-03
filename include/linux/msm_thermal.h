@@ -76,7 +76,6 @@ struct msm_thermal_data {
 	int32_t therm_reset_temp_degC;
 };
 
-<<<<<<< HEAD
 enum sensor_id_type {
 	THERM_ZONE_ID,
 	THERM_TSENS_ID,
@@ -150,9 +149,7 @@ struct device_clnt_data {
 	void                         *usr_data;
 };
 
-=======
->>>>>>> f8297f0... intelli_thermal v3.0: initial coding for Linux 3.10 Qualcomm kernels
-#if defined (CONFIG_THERMAL_MONITOR) || defined (CONFIG_INTELLI_THERMAL)
+#ifdef CONFIG_THERMAL_MONITOR
 extern int msm_thermal_init(struct msm_thermal_data *pdata);
 extern int msm_thermal_device_init(void);
 extern int msm_thermal_set_frequency(uint32_t cpu, uint32_t freq,
