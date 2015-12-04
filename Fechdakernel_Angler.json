@@ -1,0 +1,65 @@
+{
+  "name": "",
+  "short_description": "FechdaKernel for Nexus 6P by fechinator",
+  "long_description": "FechdaKernel for the Nexus 6P with hotplugging and many customizations.",
+  "logo": "http://i.imgur.com/misSc9X.jpg",
+  "xda": "http://forum.xda-developers.com/nexus-6p/orig-development/kernel-fechdakernel-t3261551",
+  "github": "https://github.com/Fechinator/android_kernel_huawei_angler",
+  "features": [
+    "Linux Kernel 3.10.93",
+    "Compiled with UBER-Toolchain GCC 5.2.x",
+    "-O3 optimized",
+    {
+      "name": "CPU Governors",
+      "items": [
+        "ElementalX",
+        "Lionheart",
+        "BluActive"
+      ]
+    },
+    {
+      "name": "I/O Schedulers",
+      "items": [
+        "noop",
+        "deadline",
+        "row",
+        "cfq",
+        "bfq",
+        "test-iosched",
+        "sioplus"
+    ]
+    },
+    {
+      "name": "Hotplug",
+      "items": [
+        "Thunderplug V5.0"
+    ]
+    },
+    {
+      "name": "Thermal Solution",
+      "items": [
+        "Intelli Thermal V3.0"
+    ]
+    },
+    "Power Suspend",
+    "LCD Notifier",
+    "Sweep2sleep",
+    "Wake gestures",
+    "Adreno Idler",
+    "Advanced color control",
+    "SELinux: permissive",
+    "State Notifier",
+    "Frandom"
+  ],
+  "downloads":  [
+    {
+      "name": "FechdaKernel-1.2-Angler.zip",
+      "url": "https://www.androidfilehost.com/?fid=24269982087010240",
+      "md5sum": "23657863d2aaadd8916f3d13b9c39107",
+      "changelog": [
+        "https://docs.google.com/document/d/139tLLREYKbChYUn-vq3HjwJixQ0gkGneOt7zmtOEYdA/edit"
+      ],
+      "install_method": "Flash from recovery"
+    }
+  ]
+}
