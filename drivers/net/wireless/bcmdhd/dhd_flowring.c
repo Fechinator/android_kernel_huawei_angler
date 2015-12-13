@@ -172,7 +172,6 @@ dhd_flow_rings_init(dhd_pub_t *dhdp, uint32 num_flow_rings)
 	if_flow_lkup_t *if_flow_lkup = NULL;
 	void *lock = NULL;
 	unsigned long flags;
-	if_flow_lkup_t *if_flow_lkup;
 
 
 	DHD_INFO(("%s\n", __FUNCTION__));
@@ -493,6 +492,7 @@ dhd_flowid_lookup(dhd_pub_t *dhdp, uint8 ifindex,
 	flow_ring_node_t *flow_ring_node;
 	flow_ring_table_t *flow_ring_table;
 	unsigned long flags;
+	if_flow_lkup_t *if_flow_lkup;
 
 	DHD_INFO(("%s\n", __FUNCTION__));
 	*flowid = FLOWID_INVALID;
